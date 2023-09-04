@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<style>
+    .main{
+        
+        margin: auto;
+        width:40% ;
+    }
+
+    tr{
+        border: 2px solid black;
+    }
+    th{
+        border: 2px solid black;
+        
+    }
+    td{
+        border: 2px solid black;
+
+    }
+    input{
+        margin: 2px;
+    }
+    .main h2{
+        color: blue;
+        margin-left: 100px;
+    }
+</style>
+<body>
+
+    <div class="main">
+        <h2>Registration Form</h2>
+        <form action="#">
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <th>Re-enter Password</th>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Gender </th>
+                    <td> <input type="radio" name="gender">Male</td>
+                </tr>                        
+                    <tr>  
+                     <td> <input type="radio" name="gender">Female</td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th>Phone Number</th>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><textarea name="" id="" cols="30" rows="10"></textarea></td>
+                    
+                </tr>
+                <tr>
+                    <th>Choose your country</th>
+                    <td>
+                       <select name="country" id="">
+                        <option value="india">India</option>
+                        <option value="india">German</option>
+                        <option value="india">France</option>
+                        <option value="india">Austrila</option>
+                    </select>
+                      
+                    </td>
+
+                </tr>
+                <tr>
+                    <th>Languages Known</th>
+                    <td>
+                        <input type="checkbox" name="lang" id="">English
+                        <input type="checkbox" name="lang" id="">Gernman
+                        <input type="checkbox" name="lang" id="">French
+                        <input type="checkbox" name="lang" id="">Hindi
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input type="checkbox" name="t&c" id=""> Hereby I declare all the given details are true</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Log in to <a href="#">Ethnus</a> website
+                    </td>
+                </tr>
+            </table>
+
+            <input  type="submit" value="Register" style="margin-left: 180px;">
+        </form>
+    </div>
+    
+</body>
+</html>
