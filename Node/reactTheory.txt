@@ -1,0 +1,184 @@
+Intoduction to ReactJS
+
+1. ReactJS is a javascript library which is used to  create single page application 
+   with help of a UI components
+
+2. It uses the Virtual DOM
+3. It supports one way binding
+4. It supports JSX
+5. It is responsible only for "V" part in MVC 
+Single webpage
+There is only one html document is available in one react application
+
+components
+
+The components are the heart of react application
+It is a small piece of HTML document which can be reused 
+
+Virtual DOM / ReactDOM
+It is virtually exist and used to increase the performance by rendering the pages more faster
+It will render only the modifiend content hence increasing the performance
+
+HTML DOM / Real DOM
+If any changes made in the document the entire document will rneder again from the begining hence decreasing the ferformance
+<html>
+<head></head>
+<body>
+<h1>Hi  </h1>
+</body>
+</html>
+
+Run in browser
+.............
+
+One way binding
+view to component
+component to view
+
+JSX
+javascript XML
+In javascript we can write the HTML content
+
+MVC architecture
+
+M - Model - Mongo DB
+V - View - Frontend - React
+C - Controller - backend - ExpressJS
+
+nodejs is used as the runtime environment
+
+
+Folder structure of React application
+1. node_modules folders => the files and folders which is required to run react application
+2. public => index.html
+3. src => index.js , index.css , App.js , App.css
+4. package - lock.json and package.json => Identitfy the dependendcies to run an application
+5. Read.md file => Document which contains information about react
+
+index.html
+<div id="root">  </div>
+
+document.getElementById("root");
+
+To make a root element in virtual DOM,command we need to use is ReactDOM.createRoot()
+
+import App from "./App"
+const root = ReactDOM.createRoot(document.getElementById("root"));                ===========================// this is the starting point of the virtual DOM , now we can start creating anything we want 
+root.render(<h1>Hello</h1>)
+
+Inside the Virtual DOM
+
+<div id="root"> 
+<h1>Hello</h1>
+ </div>
+
+ In the real DOM
+ <html>
+ <head>...</head>
+ <body>
+   <div id="root"> 
+<h1>Hello</h1>
+ </div>
+
+ </body>
+ </html>
+
+
+App.js
+function App(){
+    return(
+        <div>
+        HTML code goes her ...
+        </div>
+    )
+}
+
+export deafult App
+
+Editing in App.js -> Reflects in index.js file -> it updates the virutal dom in turn it modifies the real dom
+App.js(Function) ==> Index.js(Virtual dom) ==> Index.html
+
+Sample.js 
+
+-----------------
+components (Used for code reusabilty)
+
+Small peice of code which can be reused to deelop webpage 
+1. Functional componenets = Stateless componenets and it does not have any lifecycle
+2. Class componenets - Stateful componenet  it has its lifecycle
+
+Functional component (Its written below in jsx)
+
+This code below is written inside the Header.js inside componenets folder inside src
+
+function funcitonname(){
+    return(
+        <div>HTML CODE GOES HERE</div>
+    )
+}
+
+Export a component 
+
+1. export default Header; 
+2. export function funcitonname (namespace export)
+
+Class components
+
+import
+class ClassName extends component
+{
+    render()
+    {
+        return(
+            <div>
+            HTML CODE GOES HERE...
+            </div>
+        )
+    }
+}
+
+1. export deafult ClassName
+2. or do it using namespace
+
+
+
+function App() {
+  return (
+    <div>
+  
+      <C2 />
+      <C3 />
+     
+    </div>
+  );
+}
+Here App is the parent component and C2 and C3 are the child component
+
+
+
+function
+State and Props
+Props => immutable (cant be changed)
+It is used to transmit the data from one component to another
+
+
+State => mutable(can be changed) it can be used inside class component
+It is called internal storage of a component
+
+
+Life cycle methods of a class component
+1. Initial phase
+    Defines the state and props value
+2. Mounting phase
+    a. constructor() - > used to construct the class component
+    b. getDerivedStateFromProps() = > used to get the state and props values
+    c. render() - > used to render the webpaged
+    d. componentDidMOunt()->used for side effects [ie. HTTP request]
+3. Updating Phase
+    a. getDerivedStateFromProps()-> used to get the state and props values
+    b. should componentUpdate()-> used to declare whetere component should be updated or not
+    c. render()-> used to re-render the webpage
+    d. getSnapshotBeforeUpdate()- used to store the previous state and props values
+    e. componentDidUpdate()-> used for the side effects
+4. Unmounting phase
+    a. componentWillUnmount()-> executed when a component is removed

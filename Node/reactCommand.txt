@@ -1,0 +1,18 @@
+To cehck the verison 
+ 
+ node -v => 18.19.2
+
+npm install -g node@18.19.2
+ npm install -g npm@8.19.2
+
+ To create react application 
+ npm create-react-app [forldername]
+
+ eg :
+ npx create-react-app frontend1
+
+ To run the react application cd Foldername 
+
+ eg:
+ cd frontend1
+ npm start
